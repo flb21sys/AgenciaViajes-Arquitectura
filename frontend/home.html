@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agencia de Viajes</title>
+    <link href="styles/home.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body>
+    <div class="bottonsesion">
+        <a href="/logout.php" class="logout">
+            <button id="cerrarBtn" class="boton-cerrar">Cerrar Sesion</button>
+        </a>
+    </div>
+    <div class="CajaPrincipal">
+        <div class="Caja1">
+            <h1>AGENCIA INTERNATIONAL</h1>
+        </div>
+        <div class="Caja2" x-data="{ open: true }">
+            <table class="tabla1">
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                            <h2 >Mis últimas reservas</h2>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <?php if (count($reservas) > 0): ?>
+                        </td>
+                        <td>
+                            <?php foreach ($reservas as $reserva): ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p><strong>Destino:</strong> <?= htmlspecialchars($reserva['Ciudad']) ?>, <?= htmlspecialchars($reserva['Pais']) ?>, <?= htmlspecialchars($reserva['Localidad']) ?></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p><strong>Paquete:</strong> <?= htmlspecialchars($reserva['NombrePaquete']) ?></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p><strong>Fechas del paquete:</strong> <?= htmlspecialchars($reserva['FechaInicio']) ?> a <?= htmlspecialchars($reserva['FechaFin']) ?></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p><strong>Fecha reserva:</strong> <?= htmlspecialchars($reserva['FechaReserva']) ?></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p><strong>Número de personas:</strong> <?= htmlspecialchars($reserva['NumPersonas']) ?></p>
+                            <?php endforeach; ?>
+                            <?php else: ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p class="">No tienes reservas aún.</p>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="Destinos">
+            <h2>Destinos destacados</h2>
+            <div class="destinos1">
+                <?php foreach ($destinos as $destino): ?>
+            </div>
+            <div class="destino2">
+                <?= htmlspecialchars($destino['nombreDestino']) ?>
+            </div>
+                <?php endforeach; ?>
+            <div class="gif">
+                <img src="recursos/logo-avion.gif">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
