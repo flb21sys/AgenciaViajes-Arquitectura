@@ -1,0 +1,179 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:url('../recursos/fondoavif.avif');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-attachment:fixed;
+    color:coral;
+}
+div.bottonsesion{
+    margin-right:100px;
+    clear:both;
+    float:rights;
+}
+a.logout{
+    text-align:right;
+}
+.boton-cerrar {
+    background-color: #ff7e79;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.boton-cerrar:hover{
+    animation-name:sesion;
+    animation-duration:6000ms;
+    animation-iteration-count:2;
+    animation-timing-function:ease-in;
+    animation-timing-function:steps(6);
+}
+@keyframes sesion {
+    0%{
+        width:200px;
+        height:100px;
+    }
+    50%{
+        width:150px;
+        height:50px;
+    }
+    100%{
+        width:100px;
+    }
+}
+
+div.CajaPrincipal{
+    background-image:url('../recursos/nubes.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-attachment:fixed;
+    margin:0 auto;
+    width:800px;
+    height:1400px;
+    text-align:center;
+    border-radius:20%;
+}
+div.CajaPrincipal h1{
+    background:linear-gradient(135deg,coral,purple,cyan);
+}
+table.tabla1{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    margin:25px 0;
+    overflow:hidden;
+    border-radius:20%;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+}
+table.tabla1 td {
+    border: 3px double orange; 
+    padding: 15px;
+}  
+table.tabla1 tr:hover td {
+    background-color: #fff0e0;
+    border: 3px solid darkorange; 
+}
+table.tabla1 th h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+div.Destinos{
+    margin:0 auto;
+}
+div.Destinos h2{
+    text-shadow:-1px 0 lightyellow,0 1px lightyellow,0 -1px lightyellow;
+    background-color:#9e159e;
+}
+div.destinos1{
+    border-radius:80px;
+    float:left;
+    clear:both;
+    animation:brasil;
+    animation-iteration-count:infinite;
+    animation-duration:10000s;
+}
+@keyframes brasil {
+    0%{
+        background-image:url('../recursos/Cidade_Maravilhosa.jpg');
+    }
+    25%{
+        background-image:url('../recursos/1_qY-74LA4Sjo405vqU0SEZQ.jpg');
+    }
+    50%{
+        background-image:url('../recursos/brasil-playa-copacabana2.jpg');
+    }
+    75%{
+        background-image:url('../recursos/fhbr7mu59silufdtd22r.webp');
+    }
+    100%{
+        background-image:url('../recursos/brasil1png.png');
+    }
+}
+div.destinos2{
+    border-radius:80px;
+    float:left;
+    clear:both;
+    animation:Australia;
+    animation-iteration-count:infinite;
+    animation-duration:10000s;
+}
+@keyframes Australia {
+    0%{
+        background-image:url('../recursos/australia1.jpg');
+    }
+    30%{
+        background-image:url('../recursos/austrlia2.jpg');
+    }
+    60%{
+        background-image:url('../recursos/australia3.jpg');
+    }
+    100%{
+        background-image:url('../recursos/australia4png.png');
+    }
+}
+div.gif{
+    float:left;
+}
+div.gif img{
+    width:300px;
+    height:150px;
+    animation-name:fly;
+    animation-duration:8000ms;
+    animation-iteration-count:2;
+    animation-timing-function:ease-in;
+    animation-timing-function:steps(6);
+}
+@keyframes fly {
+    0% {
+        top:0px;left:0px;
+        transform: translateY(-50%) rotate(0deg) scale(0.8);
+    }
+    15% {
+        top:0px;left:500px;
+        transform: translateY(-55%) rotate(-5deg) scale(1);
+    }
+    30% {
+        top:200px;left:0px;
+        transform: translateY(-45%) rotate(3deg) scale(1);
+    }
+    45% {
+        top:200px;left:0px;
+        transform: translateY(-50%) rotate(0deg) scale(1);
+    }
+    60% {
+        top:0px;left:0px;
+        transform: translateY(-55%) rotate(-4deg) scale(1);
+    }
+    75% {
+        top:300px;left:0px;
+        transform: translateY(-48%) rotate(2deg) scale(1);
+    }
+    100% {
+        top:0px;left:400px;
+        left: 105%;
+        transform: translateY(-50%) rotate(0deg) scale(0.8);
+    }
+}
