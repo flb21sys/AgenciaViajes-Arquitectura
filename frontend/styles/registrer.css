@@ -1,0 +1,84 @@
+ul.menu-horizontal {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(90deg, #0077cc, #00cc99);
+    }
+ul.menu-horizontal li {
+    float: left;
+}
+ul.menu-horizontal li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background 0.3s ease-in;
+}
+ul.menu-horizontal li a:hover {
+      background: #005f99;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #e0f7fa, #80deea);
+    margin: 0;
+    padding: 0;
+}
+form {
+    background: linear-gradient(180deg, #ffffff 50%, #e0f2f1);
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 150, 136, 0.5);
+    transition: all 0.4s ease;
+    animation: escalar 1s ease-in-out;
+}
+
+input, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+input:focus {
+    outline: none;
+    border: 2px solid #00796b;
+    box-shadow: 0 0 10px #00796b;
+}
+button {
+    background: linear-gradient(to right, #26a69a, #00796b);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    transform: scale(1.05);
+    background: #004d40;
+}
+@keyframes escalar {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+}
+@media screen and (max-width: 500px) {
+      form {
+        width: 90%;
+        margin: 20px auto;
+      }
+      ul.menu-horizontal li {
+        float: none;
+      }
+      ul.menu-horizontal {
+        flex-direction: column;
+      }
+    }
