@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link href="styles/login.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="principal"></div>
+    <div>
+        <form method="POST">
+            <input type="email" name="email" placeholder="Correo" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+    </div>
+    <div class="registro">
+        <div class="menu"></div>
+        <div class="menu2 contrae">
+            <a href="/register">¿No tienes cuenta? Regístrate aquí</a>
+            <a href="/phpmyadmin"  target="_blank">
+                Acceso a phpMyAdmin
+            </a>
+            <?php if ($isAdmin): ?>
+                <a href="/phpmyadmin" class="admin-only" target="_blank">
+                    Panel de Administrador (phpMyAdmin)
+                </a>
+            <?php endif; ?>
+            <script>
+                const A = document.querySelectorAll('.menu');
+                const B = document.querySelectorAll('.menu2');
+
+                A.forEach((cadaA, i) => {
+                    A[i].addEventListener('click', () => {
+                        if (!B[i].classList.contains('expande')) {
+                            B[i].classList.remove('contrae');
+                            B[i].classList.add('expande');
+                        } else {
+                            B[i].classList.remove('expande');
+                            B[i].classList.add('contrae');
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
