@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  servidor_web:
+    image: php:8.0-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./frontend:/var/www/html
+    restart: unless-stopped
+
+  # Nota: La base de datos se mantiene como diseño documental (PDF/Access) 
+  # en esta fase de la arquitectura.
